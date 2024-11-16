@@ -6,6 +6,7 @@ To develop a Django application to store and retrieve data from a bank loan data
 
 ## ENTITY RELATIONSHIP DIAGRAM
 
+![Screenshot 2024-11-16 103753](https://github.com/user-attachments/assets/3f87ec33-73ae-4d36-b437-d8558efbc15f)
 
 
 ## DESIGN STEPS
@@ -41,8 +42,9 @@ class sksAdmin(admin.ModelAdmin):
 
 
 ## OUTPUT
+![Screenshot 2024-11-15 181707](https://github.com/user-attachments/assets/4c39dbeb-9f1c-4c8a-8dee-97c5d5acb726)
 
-![Screenshot 2024-11-15 181707](https://github.com/user-attachments/assets/12a14f25-18f2-411d-b0a0-ec01ca74f610)
+
 
 
 
