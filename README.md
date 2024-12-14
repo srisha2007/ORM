@@ -24,24 +24,30 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
+```
+models.py
 
 from django.db import models
+from django.contrib import admin
+class Employee (models.Model):
+    eid=models.CharField(max_length=20,help_text="EMPLOYEE ID")
+    name=models.CharField(max_length=100)
+    salary=models.IntegerField()
+    age=models.IntegerField()
+    email=models.EmailField()
+
+class EmployeeAdmin(admin.ModelAdmin):
+    list_display=('eid','name','salary','age','email')
+
+admin.py
 
 from django.contrib import admin
-
-class sks (models.Model):
-    loan_id=models.IntegerField(primary_key=True)
-    loan_type=models.CharField(max_length=100)
-    loan_acc=models.FloatField()
-    cust_acno=models.IntegerField()
-    cust_name=models.CharField(max_length=100)
- 
-class sksAdmin(admin.ModelAdmin):
-    list_display=('loan_id', 'loan_type','loan_acc','cust_acno','cust_name')
-
-
+from .models import Employee,EmployeeAdmin
+admin.site.register(Employee,EmployeeAdmin)
+```
 
 ## OUTPUT
+
 ![Screenshot 2024-11-15 181707](https://github.com/user-attachments/assets/4c39dbeb-9f1c-4c8a-8dee-97c5d5acb726)
 
 
