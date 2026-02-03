@@ -1,11 +1,13 @@
 # Ex02 Django ORM Web Application
-## Date: 
+## Date: 03/02/2026
 
 ## AIM
 To develop a Django application to manage an online food delivery platform like Zomato/Swiggy using Object Relational Mapping (ORM).
 
 ## ENTITY RELATIONSHIP DIAGRAM
 
+
+![alt text](ERD.png)
 
 
 ## DESIGN STEPS
@@ -23,12 +25,34 @@ Enter the code for admin.py and models.py
 Execute Django admin and create details for 10 books
 
 ## PROGRAM
+```
+admin.py
+ 
+from django.contrib import admin
+from .models import Orderitem
+admin.site.register(Orderitem);
+class OrderitemAdmin(admin.ModelAdmin):
+        list_display = ('ordid','userid','orddate','deliveryaddress','itemname','unitprice''ordqt','totalamount')
+```
+```
+models.py
 
+from django.db import models
+
+class Orderitem(models.Model):
+    ordid = models.IntegerField(primary_key=True)
+    userid = models.IntegerField()
+    orddate = models.DateField()
+    deliveryaddress = models.CharField()
+    itemname = models.CharField()
+    unitprice = models.FloatField()
+    ordqt = models.IntegerField()
+    totalamount = models.FloatField()
+```
 
 
 ## OUTPUT
-
-Include the screenshot of your admin page.
+![alt text](<Screenshot 2026-02-03 140926.png>)
 
 
 ## RESULT
